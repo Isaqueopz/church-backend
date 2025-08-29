@@ -14,13 +14,13 @@ import {
 export const event = pgTable("event", {
   id: serial('id').primaryKey().notNull(),
   imageUrl: text('image_url'),
-  name: varchar('name', { length: 60 }).notNull(),
+  name: varchar ('name', {length: 60}).notNull(),
   value: real('value'),
   quantityOfTickets: integer('quantity_of_tickets').notNull(),
   ministres: text('ministres').notNull(),
   datetime: date('datetime').defaultNow(),
   desc: text('desc'),
-  created_at: timestamp('created_at').defaultNow().notNull(),
+  created_at:timestamp('created_at').defaultNow().notNull(),
   updatedAt: timestamp('updated_at').defaultNow(),
 });
 
